@@ -11,6 +11,11 @@
 输入切割前大tif路径，输入小tif输出目录
 
 eg:E:\split\images\test.tif;E:\split\tiles
+
+## 生成预测txt
+获取目录中影像文件存入txt
+调用createInferenceTxt.py，输入参数为瓦片目录
+
 ## 分类结果合并
 ### 1. 把png结果转成tif格式
 这里png转tif用到png2tif.py
@@ -28,7 +33,3 @@ eg:
 E:\project\ai\PaddleSeg\visual_yzc_256_tif2
 E:\project\ai\PaddleSeg\visual_merge\visual_yzc_256.tif
 
-
-## 生成预测txt
-获取目录中影像文件存入txt
-调用createInferenceTxt.py，输入参数为瓦片目录
