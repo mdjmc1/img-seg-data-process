@@ -1,4 +1,8 @@
 # 图像语义分割数据处理步骤
+本文档为paddleseg的数据处理操作说明，是我个人的学习笔记，供大家参考
+
+本文涵盖训练数据的处理、预测数据的处理、生成结果的处理三个方面，记录了处理流程、注意事项
+
 ## 安装环境：
 * nodejs、conda、国内源配置
 * 最好创建一个单独的conda环境，用conda安装gdal、opencv-python依赖
@@ -30,3 +34,8 @@ eg:
 E:\project\ai\PaddleSeg\visual_yzc_256_tif2
 E:\project\ai\PaddleSeg\visual_merge\visual_yzc_256.tif
 
+## 注意事项：
+1. 标签必须是灰度，不能是rgb。
+2. tif转png可能会有转错的，要把错误的影像和相应的标签都删掉。
+3. 生成的标签txt中要用正斜杠替换反斜杠，不然会报错
+4. 标签的分类和代码中NUM_CLASSES的数要对应。如果只分割建筑，则NUM_CLASSES=2
