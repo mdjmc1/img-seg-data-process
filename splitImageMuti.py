@@ -176,10 +176,12 @@ if __name__=="__main__":
     #总行列数
     cols,rows=dataset.RasterXSize,dataset.RasterYSize
     dataset=None
-    #确保cols，rows能被分割的小块的边长整除
-    if cols % size != 0 or rows % size != 0 :
-        print("error:影像的长宽必须能被"+size+"整除")
-        exit()
+
+    # #确保cols，rows能被分割的小块的边长整除
+    # if cols % size != 0 or rows % size != 0 :
+    #     print("error:影像的长宽必须能被"+size+"整除")
+    #     exit()
+
     #获取分片的行数和列数
     numx,numy=int(np.ceil(cols/size)),int(np.ceil(rows/size))
     pool = Pool(parelle)

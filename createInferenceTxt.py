@@ -17,7 +17,7 @@ def walkFile(file):
             forder = root[root.rindex('\\') + 1: len(root)]
             rPath = os.path.join(forder, f).replace('\\', '/')
             list.append(rPath)
-        file_path_txt = os.path.join(os.getcwd(),'detection.txt')
+        file_path_txt = os.path.join(file,'detection.txt')
         with open(file_path_txt, "w") as f:
             line = ''
             for item in list:
