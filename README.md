@@ -39,3 +39,4 @@ E:\project\ai\PaddleSeg\visual_merge\visual_yzc_256.tif
 2. tif转png可能会有转错的，要把错误的影像和相应的标签都删掉。
 3. 生成的标签txt中要用正斜杠替换反斜杠，不然会报错
 4. 标签的分类和代码中NUM_CLASSES的数要对应。如果只分割建筑，则NUM_CLASSES=2
+5. 标签的分类必须从0开始依次递增，不能跳跃随便写
